@@ -1,4 +1,15 @@
-0000 8661             (      testmjh.asm):00001                 lda     #'a
-0002 B78000           (      testmjh.asm):00002                 sta     $8000
-0005 3F               (      testmjh.asm):00003                 swi     
-                      (      testmjh.asm):00004                 end
+                      (      testmjh.asm):00001         ; http://www.classiccmp.org/dunfield/pet/sp6809as.pdf
+                      (      testmjh.asm):00002                 org     $1000
+                      (      testmjh.asm):00003         ;       xref    putchar_
+                      (      testmjh.asm):00004                 
+1000 8661             (      testmjh.asm):00005                 lda     #'a
+1002 B78000           (      testmjh.asm):00006                 sta     $8000
+                      (      testmjh.asm):00007         ;       jsr     putchar_
+1005 3F               (      testmjh.asm):00008         quit    swi
+                      (      testmjh.asm):00009         
+1006 68656C6C6F       (      testmjh.asm):00010                 fcc     "hello"
+100B 00               (      testmjh.asm):00011                 fcb     0       
+                      (      testmjh.asm):00012                 end
+
+Symbol Table:
+[ G] quit                             1005
