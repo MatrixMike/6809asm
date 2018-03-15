@@ -4,6 +4,8 @@
 	
 	lda	#'a
 	sta	$8000
+	ldb	9
+	mul
 ;	jsr	putchar_
 quit	swi
 

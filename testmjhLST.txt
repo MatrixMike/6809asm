@@ -4,19 +4,21 @@
                       (      testmjh.asm):00004                 
 1000 8661             (      testmjh.asm):00005                 lda     #'a
 1002 B78000           (      testmjh.asm):00006                 sta     $8000
-                      (      testmjh.asm):00007         ;       jsr     putchar_
-1005 3F               (      testmjh.asm):00008         quit    swi
-                      (      testmjh.asm):00009         
-1006 68656C6C6F       (      testmjh.asm):00010                 fcc     "hello"
-100B 00               (      testmjh.asm):00011                 fcb     0       
-                      (      testmjh.asm):00012         struct1 STRUCT
-0000s                 (      testmjh.asm):00013         field1  rmb     2
-0002s                 (      testmjh.asm):00014         field2  rmb     3
-0005s                 (      testmjh.asm):00015                 ENDSTRUCT
-                      (      testmjh.asm):00016                 end
+1005 D609             (      testmjh.asm):00007                 ldb     9
+1007 3D               (      testmjh.asm):00008                 mul
+                      (      testmjh.asm):00009         ;       jsr     putchar_
+1008 3F               (      testmjh.asm):00010         quit    swi
+                      (      testmjh.asm):00011         
+1009 68656C6C6F       (      testmjh.asm):00012                 fcc     "hello"
+100E 00               (      testmjh.asm):00013                 fcb     0       
+                      (      testmjh.asm):00014         struct1 STRUCT
+0000s                 (      testmjh.asm):00015         field1  rmb     2
+0002s                 (      testmjh.asm):00016         field2  rmb     3
+0005s                 (      testmjh.asm):00017                 ENDSTRUCT
+                      (      testmjh.asm):00018                 end
 
 Symbol Table:
-[ G] quit                             1005
+[ G] quit                             1008
 [ G] sizeof{struct1}                  0005
 [ G] struct1.field1                   0000
 [ G] struct1.field2                   0002
