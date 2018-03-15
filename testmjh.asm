@@ -9,5 +9,9 @@ quit	swi
 
 	fcc	"hello"
 	fcb	0	
+struct1	STRUCT
+field1	rmb	2
+field2	rmb	3
+	ENDSTRUCT
 	end
 

@@ -9,7 +9,14 @@
                       (      testmjh.asm):00009         
 1006 68656C6C6F       (      testmjh.asm):00010                 fcc     "hello"
 100B 00               (      testmjh.asm):00011                 fcb     0       
-                      (      testmjh.asm):00012                 end
+                      (      testmjh.asm):00012         struct1 STRUCT
+0000s                 (      testmjh.asm):00013         field1  rmb     2
+0002s                 (      testmjh.asm):00014         field2  rmb     3
+0005s                 (      testmjh.asm):00015                 ENDSTRUCT
+                      (      testmjh.asm):00016                 end
 
 Symbol Table:
 [ G] quit                             1005
+[ G] sizeof{struct1}                  0005
+[ G] struct1.field1                   0000
+[ G] struct1.field2                   0002
