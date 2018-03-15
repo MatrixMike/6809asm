@@ -1,0 +1,4 @@
+0000 8661             (      testmjh.asm):00001                 lda     #'a
+0002 B78000           (      testmjh.asm):00002                 sta     $8000
+0005 3F               (      testmjh.asm):00003                 swi     
+                      (      testmjh.asm):00004                 end
